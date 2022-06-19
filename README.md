@@ -1,7 +1,4 @@
 # 
-Tutorial for React
-To run the project:
+Scrimba beginners react course solo project
 
-1. Clone this repo
-2. Run `npm install`
-3. Run `npm start`
+This distribution only gives the source folder of the Creacte React App folder tree. Copy it to an existing CRA folder to run.
