@@ -26,7 +26,7 @@ export default function App() {
                 type: type,
                 difficulty: difficulty,
                 question: unEscape(question),
-                answers: shuffle([unEscape(correct_answer), ...incorrect_answers]),
+                answers: shuffle([correct_answer, ...incorrect_answers]),
                 answers_0_id: nanoid(),
                 answers_1_id: nanoid(),
                 answers_2_id: nanoid(),
@@ -39,7 +39,13 @@ export default function App() {
                 right_answer_i: -1
             }
         }))
-        //questionsData.answers[0]=unEscape(questionsData.answers[0])
+        //questionsData[0].answers[0]=unEscape(questionsData[0].answers[0])
+        for(let q=0; q<5; q++) {
+            for(let a=0; a<4; a++) {
+                questionsData[q].answers[a]=unEscape(questionsData[q].answers[a])
+            }
+        }
+        
         console.log("questionsData", questionsData)
         setQuestions(questionsData)
     }, [quizCount])
@@ -168,7 +174,7 @@ export default function App() {
         setScore(0)
         questionsData = []
         setButtonState(true)
-        setQuizCount(quizCount+1)
+        setQuizCount(quizCount+111)
     }
 
     // Generated url for Open trivia db
